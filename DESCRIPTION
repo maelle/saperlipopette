@@ -15,5 +15,5 @@ Imports:
     gert,
     usethis,
     withr
-URL: https://github.com/maelle/saperlipopette
+URL: https://maelle.github.io/saperlipopette/, https://github.com/maelle/saperlipopette
 BugReports: https://github.com/maelle/saperlipopette/issues
