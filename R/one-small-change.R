@@ -26,17 +26,14 @@ one_small_change <- function(parent_path) {
   original_dir <- getwd()
 
   withr::local_dir(path)
-
   gert::git_init()
 
   usethis::create_project(path = getwd())
   # Ignore Rproj that might otherwise get edited when we open the project
   rproj <- fs::dir_ls(glob = "*.Rproj")
-
   usethis::local_project(getwd(), force = TRUE)
   usethis::use_git_ignore(rproj)
   gert::git_add("*")
-
   git_commit("First commit")
 
   fs::file_create("bla")
