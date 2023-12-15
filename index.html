@@ -61,7 +61,7 @@
 <div class="page-header"><h1 id="saperlipopette">saperlipopette<a class="anchor" aria-label="anchor" href="#saperlipopette"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
+
 <p>The goal of saperlipopette is to hold functions creating Git messes, that users would then solve, to follow <a href="https://ohshitgit.com/" class="external-link uri">https://ohshitgit.com/</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -76,20 +76,37 @@
 <p>This is a basic example which shows you how to solve a common problem:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://maelle.github.io/saperlipopette/">"saperlipopette"</a></span><span class="op">)</span></span>
-<span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span> <span class="co"># to be solved with ?one_small_change</span></span>
-<span><span class="co">#&gt; [1] "/tmp/RtmpRwfeWF/file43a62bbed262"</span></span>
+<span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span> <span class="co"># to be solved with ?one_small_change</span></span>
 <span><span class="co"># what's in path</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/RtmpRwfeWF/file43a62bbed262</span></span>
+<span><span class="co">#&gt; /tmp/Rtmpurzy3s/file63834d872c86/one-small-change</span></span>
 <span><span class="co">#&gt; ├── R</span></span>
 <span><span class="co">#&gt; └── bla</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
 <span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
-<span><span class="co">#&gt; 1 28555a30455dca4ce4b1d0f214b638… Maëll… 2023-12-15 15:03:34     1 FALSE "feat:…</span></span>
-<span><span class="co">#&gt; 2 7a92f86679f25708d314891b21355d… Maëll… 2023-12-15 15:03:34     1 FALSE "First…</span></span></code></pre></div>
+<span><span class="co">#&gt; 1 d6fb48626400dd7b84dd40134ddf86… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
+<span><span class="co">#&gt; 2 26ace83d6fee02330e6f23cdd4d976… Jane … 2023-12-15 16:25:00     1 FALSE "First…</span></span></code></pre></div>
+<p>We’ve set the Git author and commiter so that the automatic commits get the same hashes, which can be useful when teaching a group.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
+<span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
+<span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
+<span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
+<span><span class="co">#&gt; 1 d6fb48626400dd7b84dd40134ddf86… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
+<span><span class="co">#&gt; 2 26ace83d6fee02330e6f23cdd4d976… Jane … 2023-12-15 16:25:00     1 FALSE "First…</span></span>
+<span><span class="va">parent_path2</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">path2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">parent_path2</span><span class="op">)</span></span>
+<span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path2</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
+<span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
+<span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
+<span><span class="co">#&gt; 1 d6fb48626400dd7b84dd40134ddf86… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
+<span><span class="co">#&gt; 2 26ace83d6fee02330e6f23cdd4d976… Jane … 2023-12-15 16:25:00     1 FALSE "First…</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -123,7 +140,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/maelle/saperlipopette/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/maelle/saperlipopette/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
