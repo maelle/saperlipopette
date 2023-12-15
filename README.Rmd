@@ -50,7 +50,7 @@ In practice here the user would change a file, then Git add it, then run `git co
 The user would examine the Git history before and after this.
 We might want to refine that interface somehow, maybe with cli messages instead of relying on the manual page.
 
-We've set the Git author and commiter so that the automatic commits get the same 
+We've set the Git author and committer so that the automatic commits get the same 
 hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine.
 
 ```{r example2}

@@ -29,7 +29,7 @@ parent_path <- withr::local_tempdir()
 path <- one_small_change(parent_path) # to be solved with ?one_small_change
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmpxa6b93/file69b0156dc738/one-small-change
+#> /tmp/RtmpWohIoD/file6ba155b5ab18/one-small-change
 #> ├── R
 #> └── bla
 gert::git_log(repo = path)
@@ -48,7 +48,7 @@ would change a file, then Git add it, then run
 before and after this. We might want to refine that interface somehow,
 maybe with cli messages instead of relying on the manual page.
 
-We’ve set the Git author and commiter so that the automatic commits get
+We’ve set the Git author and committer so that the automatic commits get
 the same hashes, which can be useful when teaching a group: everyone
 should be looking at the same hashes on their machine.
 
