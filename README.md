@@ -29,7 +29,7 @@ parent_path <- withr::local_tempdir()
 path <- one_small_change(parent_path) # to be solved with ?one_small_change
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmpurzy3s/file63834d872c86/one-small-change
+#> /tmp/Rtmpxa6b93/file69b0156dc738/one-small-change
 #> ├── R
 #> └── bla
 gert::git_log(repo = path)
@@ -40,8 +40,17 @@ gert::git_log(repo = path)
 #> 2 26ace83d6fee02330e6f23cdd4d976… Jane … 2023-12-15 16:25:00     1 FALSE "First…
 ```
 
+At this stage, the user would read the example in `?one_small_change`,
+to know what to do, and would follow the URL in that same manual page,
+to find the corresponding ohshitgit entry. In practice here the user
+would change a file, then Git add it, then run
+`git commit --amend --no-edit`. The user would examine the Git history
+before and after this. We might want to refine that interface somehow,
+maybe with cli messages instead of relying on the manual page.
+
 We’ve set the Git author and commiter so that the automatic commits get
-the same hashes, which can be useful when teaching a group.
+the same hashes, which can be useful when teaching a group: everyone
+should be looking at the same hashes on their machine.
 
 ``` r
 parent_path <- withr::local_tempdir()

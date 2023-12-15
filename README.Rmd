@@ -43,8 +43,15 @@ fs::dir_tree(path)
 gert::git_log(repo = path)
 ```
 
+At this stage, the user would read the example in `?one_small_change`, 
+to know what to do, 
+and would follow the URL in that same manual page, to find the corresponding ohshitgit entry.
+In practice here the user would change a file, then Git add it, then run `git commit --amend --no-edit`.
+The user would examine the Git history before and after this.
+We might want to refine that interface somehow, maybe with cli messages instead of relying on the manual page.
+
 We've set the Git author and commiter so that the automatic commits get the same 
-hashes, which can be useful when teaching a group.
+hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine.
 
 ```{r example2}
 parent_path <- withr::local_tempdir()
