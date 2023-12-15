@@ -1,5 +1,9 @@
 #' "Oh shit, I committed and immediately realized I need to make one small change!"
 #'
+#' @description
+#' To go with <https://ohshitgit.com/#change-last-commit>
+#'
+#'
 #' @param path Path where to create the exercise repo
 #'
 #' @return The path

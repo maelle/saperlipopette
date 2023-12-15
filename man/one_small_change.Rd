@@ -13,7 +13,7 @@ one_small_change(path)
 The path
 }
 \description{
-"Oh shit, I committed and immediately realized I need to make one small change!"
+To go with \url{https://ohshitgit.com/#change-last-commit}
 }
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
