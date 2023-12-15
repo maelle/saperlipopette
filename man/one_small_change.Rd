@@ -21,7 +21,7 @@ parent_path <- withr::local_tempdir()
 path <- one_small_change(parent_path = parent_path)
 fs::dir_tree(path)
 gert::git_log(repo = path)
-# Now add "thing 3" to "bla"
+# Now add "thing 3" to the "bla" file
 # And amend the latest commit
 \dontshow{\}) # examplesIf}
 }
