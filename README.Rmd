@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# saperlipopette
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of saperlipopette is to hold functions creating Git messes, that users 
+would then solve, to follow https://ohshitgit.com/.
+
+## Installation
+
+You can install the development version of saperlipopette like so:
+
+``` r
+pak::pak("maelle/saperlipopette")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library("saperlipopette")
+path <- withr::local_tempdir()
+one_small_change(path) # to be solved with ?one_small_change
+# what's in path
+fs::dir_tree(path)
+gert::git_log(repo = path)
+```
