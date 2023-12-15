@@ -80,7 +80,7 @@
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span> <span class="co"># to be solved with ?one_small_change</span></span>
 <span><span class="co"># what's in path</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/Rtmpurzy3s/file63834d872c86/one-small-change</span></span>
+<span><span class="co">#&gt; /tmp/Rtmpxa6b93/file69b0156dc738/one-small-change</span></span>
 <span><span class="co">#&gt; ├── R</span></span>
 <span><span class="co">#&gt; └── bla</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
@@ -89,7 +89,8 @@
 <span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
 <span><span class="co">#&gt; 1 d6fb48626400dd7b84dd40134ddf86… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
 <span><span class="co">#&gt; 2 26ace83d6fee02330e6f23cdd4d976… Jane … 2023-12-15 16:25:00     1 FALSE "First…</span></span></code></pre></div>
-<p>We’ve set the Git author and commiter so that the automatic commits get the same hashes, which can be useful when teaching a group.</p>
+<p>At this stage, the user would read the example in <code><a href="reference/one_small_change.html">?one_small_change</a></code>, to know what to do, and would follow the URL in that same manual page, to find the corresponding ohshitgit entry. In practice here the user would change a file, then Git add it, then run <code>git commit --amend --no-edit</code>. The user would examine the Git history before and after this. We might want to refine that interface somehow, maybe with cli messages instead of relying on the manual page.</p>
+<p>We’ve set the Git author and commiter so that the automatic commits get the same hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/one_small_change.html">one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
