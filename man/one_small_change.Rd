@@ -4,10 +4,10 @@
 \alias{one_small_change}
 \title{"Oh shit, I committed and immediately realized I need to make one small change!"}
 \usage{
-one_small_change(path)
+one_small_change(parent_path)
 }
 \arguments{
-\item{path}{Path where to create the exercise repo}
+\item{parent_path}{Path where to create the exercise repo}
 }
 \value{
 The path
@@ -17,8 +17,10 @@ To go with \url{https://ohshitgit.com/#change-last-commit}
 }
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
-path <- withr::local_tempdir()
-one_small_change(path = path)
+parent_path <- withr::local_tempdir()
+path <- one_small_change(parent_path = parent_path)
+fs::dir_tree(path)
+gert::git_log(repo = path)
 # Now add "thing 3" to "bla"
 # And amend the latest commit
 \dontshow{\}) # examplesIf}

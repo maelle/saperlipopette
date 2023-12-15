@@ -36,9 +36,21 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library("saperlipopette")
-path <- withr::local_tempdir()
-one_small_change(path) # to be solved with ?one_small_change
+parent_path <- withr::local_tempdir()
+path <- one_small_change(parent_path) # to be solved with ?one_small_change
 # what's in path
 fs::dir_tree(path)
 gert::git_log(repo = path)
+```
+
+We've set the Git author and commiter so that the automatic commits get the same 
+hashes, which can be useful when teaching a group.
+
+```{r example2}
+parent_path <- withr::local_tempdir()
+path <- one_small_change(parent_path)
+gert::git_log(repo = path)
+parent_path2 <- withr::local_tempdir()
+path2 <- one_small_change(parent_path2)
+gert::git_log(repo = path2)
 ```

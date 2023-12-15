@@ -13,6 +13,7 @@ Imports:
     brio,
     fs,
     gert,
+    parsedate,
     usethis,
     withr
 URL: https://maelle.github.io/saperlipopette/, https://github.com/maelle/saperlipopette

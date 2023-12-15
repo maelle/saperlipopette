@@ -4,17 +4,21 @@
 #' To go with <https://ohshitgit.com/#change-last-commit>
 #'
 #'
-#' @param path Path where to create the exercise repo
+#' @param parent_path Path where to create the exercise repo
 #'
 #' @return The path
 #' @export
 #'
 #' @examplesIf interactive()
-#' path <- withr::local_tempdir()
-#' one_small_change(path = path)
+#' parent_path <- withr::local_tempdir()
+#' path <- one_small_change(parent_path = parent_path)
+#' fs::dir_tree(path)
+#' gert::git_log(repo = path)
 #' # Now add "thing 3" to "bla"
 #' # And amend the latest commit
-one_small_change <- function(path) {
+one_small_change <- function(parent_path) {
+
+  path <- file.path(parent_path, "one-small-change")
 
   withr::local_options(usethis.quiet = TRUE)
 
@@ -33,7 +37,7 @@ one_small_change <- function(path) {
   usethis::use_git_ignore(rproj)
   gert::git_add("*")
 
-  gert::git_commit("First commit")
+  git_commit("First commit")
 
   fs::file_create("bla")
   brio::write_lines(
@@ -41,7 +45,7 @@ one_small_change <- function(path) {
     path = "bla"
   )
   gert::git_add("bla")
-  gert::git_commit("feat: add bla")
+  git_commit("feat: add bla")
 
   usethis::local_project(original_dir, force = TRUE)
 
