@@ -30,6 +30,13 @@ You can install the development version of saperlipopette like so:
 pak::pak("maelle/saperlipopette")
 ```
 
+## Why this name?
+
+This package is intended to be a companion to https://ohshitgit.com/,
+so its name had to honour the exclamation.
+"saperlipopette" is an [old-fashioned French exclamation](https://en.wiktionary.org/wiki/saperlipopette).
+You can say "Saperlipopette, Git!".
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -45,7 +52,7 @@ gert::git_log(repo = path)
 
 At this stage, the user would open the newly created R project,
 where messages would indicate them what to do, 
-an which URL to follow, to find the corresponding ohshitgit entry.
+and which URL to follow, to find the corresponding ohshitgit entry.
 In practice here the user would change a file, then Git add it, then run `git commit --amend --no-edit`.
 The user would examine the Git history before and after this.
 

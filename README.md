@@ -19,6 +19,14 @@ You can install the development version of saperlipopette like so:
 pak::pak("maelle/saperlipopette")
 ```
 
+## Why this name?
+
+This package is intended to be a companion to <https://ohshitgit.com/>,
+so its name had to honour the exclamation. “saperlipopette” is an
+[old-fashioned French
+exclamation](https://en.wiktionary.org/wiki/saperlipopette). You can say
+“Saperlipopette, Git!”.
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -27,10 +35,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp1WqbPh/file68263a0cd13e/one-small-change!
+#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmp1WqbPh/file68263a0cd13e/one-small-change
+#> /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change
 #> ├── R
 #> └── bla
 gert::git_log(repo = path)
@@ -42,8 +50,8 @@ gert::git_log(repo = path)
 ```
 
 At this stage, the user would open the newly created R project, where
-messages would indicate them what to do, an which URL to follow, to find
-the corresponding ohshitgit entry. In practice here the user would
+messages would indicate them what to do, and which URL to follow, to
+find the corresponding ohshitgit entry. In practice here the user would
 change a file, then Git add it, then run `git commit --amend --no-edit`.
 The user would examine the Git history before and after this.
 
@@ -66,7 +74,7 @@ for those commits they create themselves.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp1WqbPh/file68265fa422d8/one-small-change!
+#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe14bf0a019/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -75,7 +83,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/Rtmp1WqbPh/file68265803fa31/one-small-change!
+#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe15c17e3af/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
