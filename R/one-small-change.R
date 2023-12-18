@@ -29,7 +29,7 @@ exo_one_small_change <- function(parent_path) {
   gert::git_init()
 
   file.copy(
-    system.file("exo_one_small-change-Rprofile.R", package = "saperlipopette"),
+    system.file("exo_one_small_change-Rprofile.R", package = "saperlipopette"),
     ".Rprofile"
   )
 
