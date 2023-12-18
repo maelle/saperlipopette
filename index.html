@@ -83,10 +83,10 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://maelle.github.io/saperlipopette/">"saperlipopette"</a></span><span class="op">)</span></span>
 <span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpEbDkDo/file1d9362b79fc0/one-small-change!</span></span>
 <span><span class="co"># what's in path</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change</span></span>
+<span><span class="co">#&gt; /tmp/RtmpEbDkDo/file1d9362b79fc0/one-small-change</span></span>
 <span><span class="co">#&gt; ├── R</span></span>
 <span><span class="co">#&gt; └── bla</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
@@ -99,16 +99,20 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ "Oh shit, I committed and immediately realized I need to make one small change!"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ I wanted to list 3 things in my bla file, not only two!</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ℹ See &lt;https://ohshitgit.com/#change-last-commit&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • Add 'thing 3' to the 'bla' file and save it.</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • Add 'bla' file to Git.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • git commit --amend --no-edit</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; • Examine Git history.</span></span></code></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ℹ For more help use `tip()`</span></span></code></pre></div>
+<p>If they need more instructions than what is initially provided, the user can run:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">tip</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; • Add 'thing 3' to the 'bla' file and save it.</span></span>
+<span><span class="co">#&gt; • Add 'bla' file to Git.</span></span>
+<span><span class="co">#&gt; • git commit --amend --no-edit</span></span>
+<span><span class="co">#&gt; • Examine Git history.</span></span></code></pre></div>
 <p>That interface relies on adding an <code>.Rprofile</code> to the newly created project, with instructions formatted with the cli package.</p>
 <p>We’ve set the Git author, committer and date so that the automatic commits get the same hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine, except for those commits they create themselves.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe14bf0a019/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpEbDkDo/file1d9362a797323/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
@@ -117,7 +121,7 @@
 <span><span class="co">#&gt; 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…</span></span>
 <span><span class="va">parent_path2</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe15c17e3af/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpEbDkDo/file1d9364368d460/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
