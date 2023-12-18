@@ -37,27 +37,33 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
-path <- one_small_change(parent_path) # to be solved with ?one_small_change
+path <- exo_one_small_change(parent_path)
 # what's in path
 fs::dir_tree(path)
 gert::git_log(repo = path)
 ```
 
-At this stage, the user would read the example in `?one_small_change`, 
-to know what to do, 
-and would follow the URL in that same manual page, to find the corresponding ohshitgit entry.
+At this stage, the user would open the newly created R project,
+where messages would indicate them what to do, 
+an which URL to follow, to find the corresponding ohshitgit entry.
 In practice here the user would change a file, then Git add it, then run `git commit --amend --no-edit`.
 The user would examine the Git history before and after this.
-We might want to refine that interface somehow, maybe with cli messages instead of relying on the manual page.
 
-We've set the Git author and committer so that the automatic commits get the same 
-hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine.
+```{r, echo=FALSE}
+source(system.file("exo_one_small-change-Rprofile.R", package = "saperlipopette"))
+```
+
+That interface relies on adding an `.Rprofile` to the newly created project,
+with instructions formatted with the cli package.
+
+We've set the Git author, committer and date so that the automatic commits get the same 
+hashes, which can be useful when teaching a group: everyone should be looking at the same hashes on their machine, except for those commits they create themselves.
 
 ```{r example2}
 parent_path <- withr::local_tempdir()
-path <- one_small_change(parent_path)
+path <- exo_one_small_change(parent_path)
 gert::git_log(repo = path)
 parent_path2 <- withr::local_tempdir()
-path2 <- one_small_change(parent_path2)
+path2 <- exo_one_small_change(parent_path2)
 gert::git_log(repo = path2)
 ```
