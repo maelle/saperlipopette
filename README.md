@@ -35,10 +35,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change!
+#> ℹ Follow along in /tmp/RtmpEbDkDo/file1d9362b79fc0/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmp26SCfZ/filefbe11bfbe9c6/one-small-change
+#> /tmp/RtmpEbDkDo/file1d9362b79fc0/one-small-change
 #> ├── R
 #> └── bla
 gert::git_log(repo = path)
@@ -58,10 +58,18 @@ The user would examine the Git history before and after this.
     #> ✖ "Oh shit, I committed and immediately realized I need to make one small change!"
     #> ✖ I wanted to list 3 things in my bla file, not only two!
     #> ℹ See <https://ohshitgit.com/#change-last-commit>
-    #> • Add 'thing 3' to the 'bla' file and save it.
-    #> • Add 'bla' file to Git.
-    #> • git commit --amend --no-edit
-    #> • Examine Git history.
+    #> ℹ For more help use `tip()`
+
+If they need more instructions than what is initially provided, the user
+can run:
+
+``` r
+tip()
+#> • Add 'thing 3' to the 'bla' file and save it.
+#> • Add 'bla' file to Git.
+#> • git commit --amend --no-edit
+#> • Examine Git history.
+```
 
 That interface relies on adding an `.Rprofile` to the newly created
 project, with instructions formatted with the cli package.
@@ -74,7 +82,7 @@ for those commits they create themselves.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe14bf0a019/one-small-change!
+#> ℹ Follow along in /tmp/RtmpEbDkDo/file1d9362a797323/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -83,7 +91,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/Rtmp26SCfZ/filefbe15c17e3af/one-small-change!
+#> ℹ Follow along in /tmp/RtmpEbDkDo/file1d9364368d460/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message

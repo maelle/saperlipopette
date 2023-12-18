@@ -57,7 +57,13 @@ In practice here the user would change a file, then Git add it, then run `git co
 The user would examine the Git history before and after this.
 
 ```{r, echo=FALSE}
-source(system.file("exo_one_small-change-Rprofile.R", package = "saperlipopette"))
+source(system.file("exo_one_small_change-Rprofile.R", package = "saperlipopette"))
+```
+
+If they need more instructions than what is initially provided, the user can run:
+
+```{r}
+tip()
 ```
 
 That interface relies on adding an `.Rprofile` to the newly created project,
