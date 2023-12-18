@@ -12,7 +12,7 @@ tip <- function() {
     items = c(
       "Add 'thing 3' to the {.path bla} file and save it.",
       "Add 'bla' file to Git.",
-      "git commit --amend --no-edit",
+      "{.code git commit --amend --no-edit}",
       "Examine Git history."
     )
   )

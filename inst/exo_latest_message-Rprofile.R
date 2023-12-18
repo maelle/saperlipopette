@@ -12,7 +12,7 @@ tip <- function() {
     items = c(
       "Examine Git history.",
       "Notice 'documennnt' should be 'document'! A typo!",
-      "git commit --amend",
+      "{.code git commit --amend}",
       "Examine Git history."
     )
   )
