@@ -2,7 +2,7 @@
 % Please edit documentation in R/split-changes.R
 \name{exo_split_changes}
 \alias{exo_split_changes}
-\title{"Hey I'd like to split these changes to the same file in several commits!"}
+\title{"Hey I'd like to split these changes to the same file into several commits!"}
 \usage{
 exo_split_changes(parent_path)
 }

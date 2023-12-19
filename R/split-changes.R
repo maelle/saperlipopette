@@ -1,4 +1,4 @@
-#' "Hey I'd like to split these changes to the same file in several commits!"
+#' "Hey I'd like to split these changes to the same file into several commits!"
 #'
 #' @description
 #' I made many edits to a file, in different places.

@@ -1,7 +1,7 @@
 if (file.exists("~/.Rprofile")) {
   base::sys.source("~/.Rprofile", envir = environment())
 }
-cli::cli_alert_danger("Hey I'd like to split these changes to the same file in several commits!")
+cli::cli_alert_danger("Hey I'd like to split these changes to the same file into several commits!")
 cli::cli_alert_danger("I want to add my three changes to R/script.R in three commits not one.")
 cli::cli_alert_info("See {.url https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches}")
 cli::cli_alert_info("For more help use {.run tip()}")
