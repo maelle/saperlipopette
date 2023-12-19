@@ -3,3 +3,4 @@
 export(exo_committed_to_main)
 export(exo_latest_message)
 export(exo_one_small_change)
+export(exo_split_changes)
