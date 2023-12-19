@@ -15,11 +15,14 @@ The path to the new project
 \description{
 To go with \url{https://ohshitgit.com/#accidental-commit-master}
 }
+\section{Git commands}{
+
+\verb{git reset --hard}, \verb{git branch}, \verb{git checkout}
+}
+
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 parent_path <- withr::local_tempdir()
 path <- exo_committed_to_main(parent_path = parent_path)
-fs::dir_tree(path)
-gert::git_log(repo = path)
 \dontshow{\}) # examplesIf}
 }

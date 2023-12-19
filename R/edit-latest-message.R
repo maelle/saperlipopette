@@ -4,7 +4,10 @@
 #' To go with <https://ohshitgit.com/#change-last-commit-message>
 #'
 #'
-#' @param parent_path Path where to create the exercise repo
+#' @inheritParams exo_one_small_change
+#'
+#' @section Git commands:
+#' `git commit --amend`
 #'
 #' @return The path
 #' @export
@@ -12,8 +15,6 @@
 #' @examplesIf interactive()
 #' parent_path <- withr::local_tempdir()
 #' path <- exo_latest_message(parent_path = parent_path)
-#' fs::dir_tree(path)
-#' gert::git_log(repo = path)
 exo_latest_message <- function(parent_path) {
 
   path <- file.path(parent_path, "latest-message")

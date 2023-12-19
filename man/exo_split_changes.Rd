@@ -19,10 +19,15 @@ I need to add the changes to Git bit by bit.
 The tool for that is \verb{git add --patch}, also available as \verb{git add -p}.
 If all your changes are presented to you as one chunk by \verb{git add --patch},
 choose the "s" option for splitting.
-See https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches.
+See \url{https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches}.
 
 Note that patch is also an option for \verb{git commit}, if you prefer so.
 }
+\section{Git commands}{
+
+\verb{git add --patch}, \verb{git add -p}.
+}
+
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 parent_path <- withr::local_tempdir()

@@ -7,13 +7,15 @@
 #' The tool for that is `git add --patch`, also available as `git add -p`.
 #' If all your changes are presented to you as one chunk by `git add --patch`,
 #' choose the "s" option for splitting.
-#' See https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches.
+#' See <https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging#_staging_patches>.
 #'
 #' Note that patch is also an option for `git commit`, if you prefer so.
 #'
 #'
 #' @inheritParams exo_one_small_change
 #'
+#' @section Git commands:
+#' `git add --patch`, `git add -p`.
 #' @return The path to the new project
 #' @export
 #'

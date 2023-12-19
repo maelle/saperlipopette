@@ -5,6 +5,8 @@
 #'
 #'
 #' @inheritParams exo_one_small_change
+#' @section Git commands:
+#' `git reset --hard`, `git branch`, `git checkout`
 #'
 #' @return The path to the new project
 #' @export
@@ -12,8 +14,6 @@
 #' @examplesIf interactive()
 #' parent_path <- withr::local_tempdir()
 #' path <- exo_committed_to_main(parent_path = parent_path)
-#' fs::dir_tree(path)
-#' gert::git_log(repo = path)
 exo_committed_to_main <- function(parent_path) {
 
   path <- file.path(parent_path, "committed-to-main")

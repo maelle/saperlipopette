@@ -6,14 +6,14 @@
 #'
 #' @param parent_path Path where to create the exercise repo
 #'
+#' @section Git commands:
+#' `git commit --amend --no-edit`
 #' @return The path
 #' @export
 #'
 #' @examplesIf interactive()
 #' parent_path <- withr::local_tempdir()
 #' path <- exo_one_small_change(parent_path = parent_path)
-#' fs::dir_tree(path)
-#' gert::git_log(repo = path)
 #' # Now add "thing 3" to the "bla" file
 #' # And amend the latest commit
 exo_one_small_change <- function(parent_path) {

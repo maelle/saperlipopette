@@ -15,12 +15,15 @@ The path
 \description{
 To go with \url{https://ohshitgit.com/#change-last-commit}
 }
+\section{Git commands}{
+
+\verb{git commit --amend --no-edit}
+}
+
 \examples{
 \dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path = parent_path)
-fs::dir_tree(path)
-gert::git_log(repo = path)
 # Now add "thing 3" to the "bla" file
 # And amend the latest commit
 \dontshow{\}) # examplesIf}
