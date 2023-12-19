@@ -2,3 +2,12 @@ url: https://maelle.github.io/saperlipopette/
 template:
   bootstrap: 5
 
+reference:
+- title: Exercises inspired from Oh shit Git!
+  contents:
+  - exo_committed_to_main
+  - exo_latest_message
+  - exo_one_small_change
+- title: Other exercises
+  contents:
+  - exo_split_changes
