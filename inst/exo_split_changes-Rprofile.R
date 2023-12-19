@@ -10,7 +10,7 @@ tip <- function() {
   cli::cli_li(
     items = c(
       "Examine Git staging area.",
-      "{.code git add --patch} to add a first chunk ('s' to split, 'y' to stage the first chunk, 'n' twice to discard the others)",
+      "{.code git add --patch} to add a first chunk ('?' to see the help, 's' to split, 'y' to stage the first chunk, 'd' to discard the others)",
       '{.code git commit -m "First change"}',
       "{.code git add --patch} to add a second chunk ('s' to split, 'y' to stage the first chunk, 'n' once to discard the other)",
       '{.code git commit -m "Second change"}',
