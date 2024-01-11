@@ -20,7 +20,11 @@
       +-- split-changes
       |   \-- R
       |       \-- script.R
-      \-- time-machine
-          \-- R
+      +-- time-machine
+      |   \-- R
+      \-- undo-commit
+          +-- R
+          +-- bla
+          \-- fix.txt
       [1] ""
 
