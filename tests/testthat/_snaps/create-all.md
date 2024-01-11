@@ -13,8 +13,10 @@
       +-- one-small-change
       |   +-- R
       |   \-- bla
-      \-- split-changes
+      +-- split-changes
+      |   \-- R
+      |       \-- script.R
+      \-- time-machine
           \-- R
-              \-- script.R
       [1] ""
 
