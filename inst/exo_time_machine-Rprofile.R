@@ -3,6 +3,7 @@ if (file.exists("~/.Rprofile")) {
 }
 cli::cli_alert_danger("I mistakenly run {.code git reset hard} so lost my feature commit.")
 cli::cli_alert_danger("I want to get it back!")
+cli::cli_alert_info("See {.url https://ohshitgit.com/#magic-time-machine}")
 cli::cli_alert_info("For more help use {.run tip()}")
 
 tip <- function() {
