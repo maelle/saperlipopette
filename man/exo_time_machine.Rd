@@ -6,6 +6,9 @@
 \usage{
 exo_time_machine(parent_path)
 }
+\arguments{
+\item{parent_path}{Path where to create the exercise repo}
+}
 \value{
 The path to the new project
 }

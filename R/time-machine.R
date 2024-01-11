@@ -4,7 +4,7 @@
 #' To go with <https://ohshitgit.com/#magic-time-machine>
 #'
 #'
-#' @inheritParams exo_time_machine
+#' @inheritParams exo_one_small_change
 #' @section Git commands:
 #' `git reset`, `git reflog`
 #'
