@@ -16,7 +16,7 @@
 #' path <- exo_time_machine(parent_path = parent_path)
 exo_time_machine <- function(parent_path) {
 
-  path <- file.path(parent_path, "exo-time-machine")
+  path <- file.path(parent_path, "time-machine")
 
   withr::local_options(usethis.quiet = TRUE)
 
@@ -27,7 +27,7 @@ exo_time_machine <- function(parent_path) {
   gert::git_init()
 
   file.copy(
-    system.file("exo_committed_to_main-Rprofile.R", package = "saperlipopette"),
+    system.file("exo_time_machine-Rprofile.R", package = "saperlipopette"),
     ".Rprofile"
   )
 
