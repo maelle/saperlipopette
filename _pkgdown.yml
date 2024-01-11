@@ -11,6 +11,7 @@ reference:
   - exo_latest_message
   - exo_one_small_change
   - exo_undo_commit
+  - exo_revert_file
 - title: Other exercises
   contents:
   - exo_split_changes

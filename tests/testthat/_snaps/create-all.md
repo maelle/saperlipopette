@@ -17,6 +17,10 @@
       +-- one-small-change
       |   +-- R
       |   \-- bla
+      +-- revert-file
+      |   +-- R
+      |   +-- bla.txt
+      |   \-- fix.txt
       +-- split-changes
       |   \-- R
       |       \-- script.R
