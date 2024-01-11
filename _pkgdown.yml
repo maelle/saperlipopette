@@ -10,6 +10,7 @@ reference:
   - exo_committed_to_wrong
   - exo_latest_message
   - exo_one_small_change
+  - exo_undo_commit
 - title: Other exercises
   contents:
   - exo_split_changes
