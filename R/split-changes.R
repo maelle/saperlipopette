@@ -28,7 +28,7 @@ exo_split_changes <- function(parent_path) {
 
   withr::local_options(usethis.quiet = TRUE)
 
-  fs::dir_create(path)
+  dir_create(path)
   original_dir <- getwd()
 
   withr::local_dir(path)
