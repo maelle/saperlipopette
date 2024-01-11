@@ -7,17 +7,27 @@ cli::cli_alert_info("See {.url https://git-scm.com/book/en/v2/Git-Tools-Interact
 cli::cli_alert_info("For more help use {.run tip()}")
 
 tip <- function() {
-  cli::cli_li(
-    items = c(
-      "Examine Git staging area.",
-      "{.code git add --patch} to add a first chunk ('?' to see the help, 's' to split, 'y' to stage the first chunk, 'd' to discard the others)",
-      '{.code git commit -m "First change"}',
-      "{.code git add --patch} to add a second chunk ('s' to split, 'y' to stage the first chunk, 'n' once to discard the other)",
-      '{.code git commit -m "Second change"}',
-      "{.code git add *} to add the last chunk",
-      '{.code git commit -m "Third change"}',
-      "Examine Git history."
-    )
-  )
+  ul <- cli::cli_ul()
+  cli::cli_li("Examine Git staging area.")
+  cli::cli_li("{.code git add --patch} to add a first chunk")
+  ulid <- cli::cli_ul()
+  cli::cli_li("'s' to split")
+  cli::cli_li("'y' to stage the first chunk")
+  cli::cli_li("'d' to discard the others")
+  cli::cli_li("Optionally, '?' to see the help")
+  cli::cli_end(ulid)
+  cli::cli_li('{.code git commit -m "First change"}')
+  cli::cli_li('{.code git add --patch} to add a second chunk')
+  ulid <- cli::cli_ul()
+  cli::cli_li("'s' to split")
+  cli::cli_li("'y' to stage the first chunk")
+  cli::cli_li("'n' once to discard the other")
+  cli::cli_li("Optionally, '?' to see the help")
+  cli::cli_end(ulid)
+  cli::cli_li('{.code git commit -m "Second change"}')
+  cli::cli_li('{.code git add *} to add the last chunk')
+  cli::cli_li('{.code git commit -m "Third change"}')
+  cli::cli_li('Examine Git history.')
+  cli::cli_end(ul)
 
 }
