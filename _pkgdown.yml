@@ -7,6 +7,7 @@ reference:
   contents:
   - exo_time_machine
   - exo_committed_to_main
+  - exo_committed_to_wrong
   - exo_latest_message
   - exo_one_small_change
 - title: Other exercises
