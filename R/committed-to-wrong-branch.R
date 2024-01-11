@@ -41,7 +41,12 @@ exo_committed_to_wrong <- function(parent_path) {
   git_commit("First commit")
 
   gert::git_branch_create("feat-bla")
-  gert::git_branch_checkout("main")
+
+  if ("main" %in% gert::git_branch_list()[["name"]]) {
+    gert::git_branch_checkout("main")
+  } else {
+    gert::git_branch_checkout("master")
+  }
 
   gert::git_branch_create("hot-fix")
   brio::write_lines("lala", "fix.txt")
