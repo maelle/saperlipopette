@@ -30,6 +30,11 @@ You can install the development version of saperlipopette like so:
 pak::pak("maelle/saperlipopette")
 ```
 
+You'll also need
+
+- a [Git installation](https://happygitwithr.com/install-git), but if you made it here you probably already use Git at least a bit.
+- a directory where to store the exercises folder. In all examples we use a temporary directory but if you prefer, you could use a dedicated "scratch directory".
+
 ## Why this name?
 
 This package is intended to be a companion to https://ohshitgit.com/,

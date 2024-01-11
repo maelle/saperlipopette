@@ -19,6 +19,14 @@ You can install the development version of saperlipopette like so:
 pak::pak("maelle/saperlipopette")
 ```
 
+You’ll also need
+
+- a [Git installation](https://happygitwithr.com/install-git), but if
+  you made it here you probably already use Git at least a bit.
+- a directory where to store the exercises folder. In all examples we
+  use a temporary directory but if you prefer, you could use a dedicated
+  “scratch directory”.
+
 ## Why this name?
 
 This package is intended to be a companion to <https://ohshitgit.com/>,
@@ -35,10 +43,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp9kEdf4/file122521c8b8a44/one-small-change!
+#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f1b0dad15/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmp9kEdf4/file122521c8b8a44/one-small-change
+#> /tmp/RtmpRaTcyA/file1257f1b0dad15/one-small-change
 #> ├── R
 #> └── bla
 # with Git in a command line: git log
@@ -88,7 +96,7 @@ building documentation.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmp9kEdf4/file122526ca52cf3/one-small-change!
+#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f63927bc6/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -97,7 +105,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/Rtmp9kEdf4/file12252481bb142/one-small-change!
+#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f2499b217/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
