@@ -23,6 +23,10 @@ You’ll also need
 
 - a [Git installation](https://happygitwithr.com/install-git), but if
   you made it here you probably already use Git at least a bit.
+- basic Git knowledge, in particular being able to examine the Git
+  history, be it with [git
+  log](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
+  or a tool in your IDE.
 - a directory where to store the exercises folder. In all examples we
   use a temporary directory but if you prefer, you could use a dedicated
   “scratch directory”.
@@ -43,10 +47,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change!
+#> ℹ Follow along in /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change
+#> /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change
 #> ├── R
 #> └── bla
 # with Git in a command line: git log
@@ -63,7 +67,8 @@ At this stage, the user would open the newly created R project and
 launch an R session, where messages would indicate them what to do, and
 which URL to follow, to find the corresponding ohshitgit entry. In
 practice here the user would change a file, then Git add it, then run
-`git commit --amend --no-edit`. The user would examine the Git history
+`git commit --amend --no-edit`. The user would examine the [Git
+history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
 before and after this.
 
     #> ✖ "Oh shit, I committed and immediately realized I need to make one small change!"
@@ -97,7 +102,7 @@ building documentation.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee61ed8576f/one-small-change!
+#> ℹ Follow along in /tmp/RtmpqqBEgT/file134993f2829c5/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -106,7 +111,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee647da1aee/one-small-change!
+#> ℹ Follow along in /tmp/RtmpqqBEgT/file134997abdb717/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message

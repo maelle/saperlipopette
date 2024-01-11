@@ -33,6 +33,7 @@ pak::pak("maelle/saperlipopette")
 You'll also need
 
 - a [Git installation](https://happygitwithr.com/install-git), but if you made it here you probably already use Git at least a bit.
+- basic Git knowledge, in particular being able to examine the Git history, be it with [git log](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) or a tool in your IDE.
 - a directory where to store the exercises folder. In all examples we use a temporary directory but if you prefer, you could use a dedicated "scratch directory".
 
 ## Why this name?
@@ -61,7 +62,7 @@ At this stage, the user would open the newly created R project and launch an R s
 where messages would indicate them what to do, 
 and which URL to follow, to find the corresponding ohshitgit entry.
 In practice here the user would change a file, then Git add it, then run `git commit --amend --no-edit`.
-The user would examine the Git history before and after this.
+The user would examine the [Git history](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) before and after this.
 
 ```{r, echo=FALSE}
 source(system.file("exo_one_small_change-Rprofile.R", package = "saperlipopette"))
