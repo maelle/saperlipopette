@@ -72,6 +72,7 @@
 <p>You’ll also need</p>
 <ul>
 <li>a <a href="https://happygitwithr.com/install-git" class="external-link">Git installation</a>, but if you made it here you probably already use Git at least a bit.</li>
+<li>basic Git knowledge, in particular being able to examine the Git history, be it with <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" class="external-link">git log</a> or a tool in your IDE.</li>
 <li>a directory where to store the exercises folder. In all examples we use a temporary directory but if you prefer, you could use a dedicated “scratch directory”.</li>
 </ul>
 </div>
@@ -88,10 +89,10 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://maelle.github.io/saperlipopette/">"saperlipopette"</a></span><span class="op">)</span></span>
 <span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change!</span></span>
 <span><span class="co"># what's in path</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change</span></span>
+<span><span class="co">#&gt; /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change</span></span>
 <span><span class="co">#&gt; ├── R</span></span>
 <span><span class="co">#&gt; └── bla</span></span>
 <span><span class="co"># with Git in a command line: git log</span></span>
@@ -102,7 +103,7 @@
 <span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
 <span><span class="co">#&gt; 1 2ff0d31f566e68ae0ee94b6028a3fa… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
 <span><span class="co">#&gt; 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…</span></span></code></pre></div>
-<p>At this stage, the user would open the newly created R project and launch an R session, where messages would indicate them what to do, and which URL to follow, to find the corresponding ohshitgit entry. In practice here the user would change a file, then Git add it, then run <code>git commit --amend --no-edit</code>. The user would examine the Git history before and after this.</p>
+<p>At this stage, the user would open the newly created R project and launch an R session, where messages would indicate them what to do, and which URL to follow, to find the corresponding ohshitgit entry. In practice here the user would change a file, then Git add it, then run <code>git commit --amend --no-edit</code>. The user would examine the <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" class="external-link">Git history</a> before and after this.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ "Oh shit, I committed and immediately realized I need to make one small change!"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ✖ I wanted to list 3 things in my bla file, not only two!</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ℹ See &lt;https://ohshitgit.com/#change-last-commit&gt;</span></span>
@@ -120,7 +121,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee61ed8576f/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134993f2829c5/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
@@ -129,7 +130,7 @@
 <span><span class="co">#&gt; 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…</span></span>
 <span><span class="va">parent_path2</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee647da1aee/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134997abdb717/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
