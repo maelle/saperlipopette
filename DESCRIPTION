@@ -15,6 +15,7 @@ Imports:
     fs,
     gert,
     parsedate,
+    purrr,
     rlang,
     usethis,
     withr
