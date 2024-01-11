@@ -43,10 +43,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f1b0dad15/one-small-change!
+#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/RtmpRaTcyA/file1257f1b0dad15/one-small-change
+#> /tmp/Rtmplr5Cnx/file12ee648762d57/one-small-change
 #> ├── R
 #> └── bla
 # with Git in a command line: git log
@@ -59,11 +59,12 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 ```
 
-At this stage, the user would open the newly created R project, where
-messages would indicate them what to do, and which URL to follow, to
-find the corresponding ohshitgit entry. In practice here the user would
-change a file, then Git add it, then run `git commit --amend --no-edit`.
-The user would examine the Git history before and after this.
+At this stage, the user would open the newly created R project and
+launch an R session, where messages would indicate them what to do, and
+which URL to follow, to find the corresponding ohshitgit entry. In
+practice here the user would change a file, then Git add it, then run
+`git commit --amend --no-edit`. The user would examine the Git history
+before and after this.
 
     #> ✖ "Oh shit, I committed and immediately realized I need to make one small change!"
     #> ✖ I wanted to list 3 things in my bla file, not only two!
@@ -96,7 +97,7 @@ building documentation.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f63927bc6/one-small-change!
+#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee61ed8576f/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -105,7 +106,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/RtmpRaTcyA/file1257f2499b217/one-small-change!
+#> ℹ Follow along in /tmp/Rtmplr5Cnx/file12ee647da1aee/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message

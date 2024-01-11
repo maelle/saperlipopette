@@ -57,7 +57,7 @@ fs::dir_tree(path)
 gert::git_log(repo = path)
 ```
 
-At this stage, the user would open the newly created R project,
+At this stage, the user would open the newly created R project and launch an R session,
 where messages would indicate them what to do, 
 and which URL to follow, to find the corresponding ohshitgit entry.
 In practice here the user would change a file, then Git add it, then run `git commit --amend --no-edit`.
