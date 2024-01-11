@@ -15,11 +15,11 @@ Imports:
     fs,
     gert,
     parsedate,
+    rlang,
     usethis,
     withr
 URL: https://maelle.github.io/saperlipopette/, https://github.com/maelle/saperlipopette
 BugReports: https://github.com/maelle/saperlipopette/issues
 Suggests: 
-    rlang,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
