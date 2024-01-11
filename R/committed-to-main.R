@@ -31,7 +31,7 @@ exo_committed_to_main <- function(parent_path) {
     ".Rprofile"
   )
 
-  usethis::create_project(path = getwd())
+  create_project(path = getwd())
   # Ignore Rproj that might otherwise get edited when we open the project
   rproj <- fs::dir_ls(glob = "*.Rproj")
   usethis::local_project(getwd(), force = TRUE)
