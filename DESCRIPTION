@@ -1,9 +1,11 @@
 Package: saperlipopette
 Title: Create Example Git Messes
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R: c(
     person("Maëlle", "Salmon", , "msmaellesalmon@gmail.com", role = c("cre", "aut"),
-           comment = c(ORCID = "0000-0002-2815-0399"))
+           comment = c(ORCID = "0000-0002-2815-0399")),
+    person("Jim", "Gardner", role = "ctb")
+  )
 Description: Holds functions creating Git messes, that users would then solve, to follow <https://ohshitgit.com/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
