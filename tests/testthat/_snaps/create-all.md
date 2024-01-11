@@ -7,6 +7,10 @@
       +-- committed-to-main
       |   +-- R
       |   \-- bla
+      +-- committed-to-wrong
+      |   +-- R
+      |   +-- bla
+      |   \-- fix.txt
       +-- latest-message
       |   +-- R
       |   \-- bla
