@@ -15,6 +15,7 @@ reference:
 - title: Other exercises
   contents:
   - exo_split_changes
+  - exo_rebase_i
 - title: All exercises at once
   contents:
   - create_all_exercises

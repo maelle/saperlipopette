@@ -1,5 +1,5 @@
 #' @keywords internal
-#' @importFrom rlang `%||%`
+#' @importFrom rlang %||%
 "_PACKAGE"
 
 ## usethis namespace: start
