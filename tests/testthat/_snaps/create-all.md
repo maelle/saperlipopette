@@ -4,6 +4,9 @@
       create_all_exercises(parent_path)
     Output
       
+      +-- bisect
+      |   \-- R
+      |       \-- script.R
       +-- clean-dir
       |   +-- R
       |   |   \-- script.R
