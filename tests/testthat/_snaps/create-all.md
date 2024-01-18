@@ -4,6 +4,14 @@
       create_all_exercises(parent_path)
     Output
       
+      +-- clean-dir
+      |   +-- R
+      |   |   \-- script.R
+      |   +-- debug1
+      |   +-- debug2
+      |   +-- debug3
+      |   +-- debug4
+      |   \-- debugging
       +-- committed-to-main
       |   +-- R
       |   \-- bla
