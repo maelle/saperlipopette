@@ -20,9 +20,9 @@ and not a story of how many stupid mistakes I made!
 The tool for that is \verb{git base --interactive} also available as \verb{git rebase -i}.
 Useful links:
 \itemize{
-\item https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/
-\item https://wizardzines.com/comics/rules-for-rebasing/
-\item https://github.com/MikeMcQuaid/GitInPractice/blob/main/06-RewritingHistoryAndDisasterRecovery.adoc#rebase-commits-interactively-git-rebase-interactive
+\item \url{https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/}
+\item \url{https://wizardzines.com/comics/rules-for-rebasing/}
+\item \url{https://github.com/MikeMcQuaid/GitInPractice/blob/main/06-RewritingHistoryAndDisasterRecovery.adoc#rebase-commits-interactively-git-rebase-interactive}
 }
 }
 \section{Git commands}{
