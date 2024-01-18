@@ -2,7 +2,7 @@ if (file.exists("~/.Rprofile")) {
   base::sys.source("~/.Rprofile", envir = environment())
 }
 
-cli::cli_alert_danger('"Hey, since when has my script {.path R/script.R} stopped to work?"')
+cli::cli_alert_danger('"Hey, since when has my script {.path R/script.R} stopped working?"')
 cli::cli_alert_danger("I need to use git bisect.")
 cli::cli_alert_info("For more help use {.run tip()}")
 
