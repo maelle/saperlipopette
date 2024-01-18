@@ -22,6 +22,9 @@
       |   +-- R
       |   +-- bla
       |   \-- fix.txt
+      +-- conflict
+      |   \-- R
+      |       \-- script.R
       +-- latest-message
       |   +-- R
       |   \-- bla

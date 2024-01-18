@@ -16,6 +16,7 @@ reference:
   contents:
   - exo_split_changes
   - exo_clean_dir
+  - exo_conflict
   - exo_rebase_i
   - exo_bisect
 - title: All exercises at once
