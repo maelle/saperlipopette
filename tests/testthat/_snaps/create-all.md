@@ -17,6 +17,10 @@
       +-- one-small-change
       |   +-- R
       |   \-- bla
+      +-- rebase-i
+      |   +-- R
+      |   +-- bla.R
+      |   \-- ci.yml
       +-- revert-file
       |   +-- R
       |   +-- bla.txt
