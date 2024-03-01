@@ -17,7 +17,8 @@ I notice a bug in my codebase.
 I can see the bug was not there a bunch of commits ago.
 Beside doing regular debugging, I can find out
 which commit introduced the bug by using \verb{git bisect}.
-See \url{https://git-scm.com/docs/git-bisect}.
+See \url{https://git-scm.com/docs/git-bisect} and
+\url{https://www.jimhester.com/post/2019-04-24-git-bisect/}.
 }
 \section{Git commands}{
 
