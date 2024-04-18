@@ -22,7 +22,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">saperlipopette</a>
 
@@ -72,7 +72,8 @@
 <p>You’ll also need</p>
 <ul>
 <li>a <a href="https://happygitwithr.com/install-git" class="external-link">Git installation</a>, but if you made it here you probably already use Git at least a bit.</li>
-<li>basic Git knowledge, in particular being able to examine the Git history, be it with <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" class="external-link">git log</a> or a tool in your IDE.</li>
+<li>
+<a href="#recommended-resources-about-git">basic Git knowledge</a>, in particular being able to examine the Git history, be it with <a href="https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History" class="external-link">git log</a> or a tool in your IDE.</li>
 <li>a directory where to store the exercises folder. In all examples we use a temporary directory but if you prefer, you could use a dedicated “scratch directory”.</li>
 </ul>
 </div>
@@ -89,10 +90,10 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://maelle.github.io/saperlipopette/">"saperlipopette"</a></span><span class="op">)</span></span>
 <span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f6663be0d/one-small-change!</span></span>
 <span><span class="co"># what's in path</span></span>
 <span><span class="fu">fs</span><span class="fu">::</span><span class="fu"><a href="https://fs.r-lib.org/reference/dir_tree.html" class="external-link">dir_tree</a></span><span class="op">(</span><span class="va">path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; /tmp/RtmpqqBEgT/file134996abeef9f/one-small-change</span></span>
+<span><span class="co">#&gt; /tmp/RtmpsiMrDj/file3e4f6663be0d/one-small-change</span></span>
 <span><span class="co">#&gt; ├── R</span></span>
 <span><span class="co">#&gt; └── bla</span></span>
 <span><span class="co"># with Git in a command line: git log</span></span>
@@ -121,7 +122,7 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">parent_path</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134993f2829c5/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f474cb413/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
@@ -130,13 +131,27 @@
 <span><span class="co">#&gt; 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…</span></span>
 <span><span class="va">parent_path2</span> <span class="op">&lt;-</span> <span class="fu">withr</span><span class="fu">::</span><span class="fu"><a href="https://withr.r-lib.org/reference/with_tempfile.html" class="external-link">local_tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">path2</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/exo_one_small_change.html">exo_one_small_change</a></span><span class="op">(</span><span class="va">parent_path2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpqqBEgT/file134997abdb717/one-small-change!</span></span>
+<span><span class="co">#&gt; ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f65cbaffc/one-small-change!</span></span>
 <span><span class="fu">gert</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/gert/reference/git_commit.html" class="external-link">git_log</a></span><span class="op">(</span>repo <span class="op">=</span> <span class="va">path2</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 2 × 6</span></span>
 <span><span class="co">#&gt;   commit                          author time                files merge message</span></span>
 <span><span class="co">#&gt; * &lt;chr&gt;                           &lt;chr&gt;  &lt;dttm&gt;              &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;  </span></span>
 <span><span class="co">#&gt; 1 2ff0d31f566e68ae0ee94b6028a3fa… Jane … 2023-12-15 16:25:00     1 FALSE "feat:…</span></span>
 <span><span class="co">#&gt; 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…</span></span></code></pre></div>
+<div class="section level3">
+<h3 id="recommended-resources-about-git">Recommended resources about Git<a class="anchor" aria-label="anchor" href="#recommended-resources-about-git"></a>
+</h3>
+<p>For beginners:</p>
+<ul>
+<li><a href="https://happygitwithr.com/" class="external-link">Happy Git with R</a></li>
+<li><a href="https://learngitbranching.js.org/" class="external-link">Learn Git branching</a></li>
+</ul>
+<p>For users less new to Git:</p>
+<ul>
+<li><a href="https://masalmon.eu/2023/11/01/reading-notes-git-in-practice/" class="external-link">Git in Practice by Mike McQuaid</a></li>
+<li><a href="https://masalmon.eu/2024/01/19/pro-git-scott-chacon-reading-notes/" class="external-link">Pro Git by Scott Chacon</a></li>
+</ul>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -189,7 +204,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer>
