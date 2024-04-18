@@ -33,7 +33,7 @@ pak::pak("maelle/saperlipopette")
 You'll also need
 
 - a [Git installation](https://happygitwithr.com/install-git), but if you made it here you probably already use Git at least a bit.
-- basic Git knowledge, in particular being able to examine the Git history, be it with [git log](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) or a tool in your IDE.
+- [basic Git knowledge](#recommended-resources-about-git), in particular being able to examine the Git history, be it with [git log](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) or a tool in your IDE.
 - a directory where to store the exercises folder. In all examples we use a temporary directory but if you prefer, you could use a dedicated "scratch directory".
 
 ## Why this name?
@@ -90,3 +90,17 @@ parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
 gert::git_log(repo = path2)
 ```
+
+
+
+### Recommended resources about Git
+
+For beginners:
+
+- [Happy Git with R](https://happygitwithr.com/)
+- [Learn Git branching](https://learngitbranching.js.org/)
+
+For users less new to Git:
+
+- [Git in Practice by Mike McQuaid](https://masalmon.eu/2023/11/01/reading-notes-git-in-practice/)
+- [Pro Git by Scott Chacon](https://masalmon.eu/2024/01/19/pro-git-scott-chacon-reading-notes/)
