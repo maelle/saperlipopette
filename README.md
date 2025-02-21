@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/maelle/saperlipopette/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/maelle/saperlipopette/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/maelle/saperlipopette/graph/badge.svg)](https://app.codecov.io/gh/maelle/saperlipopette)
 <!-- badges: end -->
 
 The goal of saperlipopette is to hold functions creating Git messes,
@@ -47,10 +49,10 @@ This is a basic example which shows you how to solve a common problem:
 library("saperlipopette")
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f6663be0d/one-small-change!
+#> ℹ Follow along in /tmp/RtmprB2S8E/file10b5d656dc3da/one-small-change!
 # what's in path
 fs::dir_tree(path)
-#> /tmp/RtmpsiMrDj/file3e4f6663be0d/one-small-change
+#> /tmp/RtmprB2S8E/file10b5d656dc3da/one-small-change
 #> ├── R
 #> └── bla
 # with Git in a command line: git log
@@ -102,7 +104,7 @@ building documentation.
 ``` r
 parent_path <- withr::local_tempdir()
 path <- exo_one_small_change(parent_path)
-#> ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f474cb413/one-small-change!
+#> ℹ Follow along in /tmp/RtmprB2S8E/file10b5d3fcba991/one-small-change!
 gert::git_log(repo = path)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
@@ -111,7 +113,7 @@ gert::git_log(repo = path)
 #> 2 e227ecc55e421f70b6e30602e6a2ee… Jane … 2023-12-15 16:25:00     2 FALSE "First…
 parent_path2 <- withr::local_tempdir()
 path2 <- exo_one_small_change(parent_path2)
-#> ℹ Follow along in /tmp/RtmpsiMrDj/file3e4f65cbaffc/one-small-change!
+#> ℹ Follow along in /tmp/RtmprB2S8E/file10b5d92f231a/one-small-change!
 gert::git_log(repo = path2)
 #> # A tibble: 2 × 6
 #>   commit                          author time                files merge message
