@@ -29,7 +29,7 @@ Note that patch is also an option for \verb{git commit}, if you prefer so.
 }
 
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 parent_path <- withr::local_tempdir()
 path <- exo_split_changes(parent_path = parent_path)
 \dontshow{\}) # examplesIf}

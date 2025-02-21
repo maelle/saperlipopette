@@ -21,7 +21,7 @@ To go with \url{https://ohshitgit.com/#change-last-commit-message}
 }
 
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 parent_path <- withr::local_tempdir()
 path <- exo_latest_message(parent_path = parent_path)
 \dontshow{\}) # examplesIf}
