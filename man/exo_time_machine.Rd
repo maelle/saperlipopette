@@ -21,7 +21,7 @@ To go with \url{https://ohshitgit.com/#magic-time-machine}
 }
 
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 parent_path <- withr::local_tempdir()
 path <- exo_time_machine(parent_path = parent_path)
 \dontshow{\}) # examplesIf}
