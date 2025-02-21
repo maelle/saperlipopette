@@ -1,63 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/404.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/index.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/create_all_exercises.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_bisect.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_clean_dir.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_committed_to_main.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_committed_to_wrong.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_conflict.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_latest_message.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_rebase_i.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_revert_file.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_split_changes.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_time_machine.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/exo_undo_commit.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://maelle.github.io/saperlipopette/reference/saperlipopette-package.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://maelle.github.io/saperlipopette/404.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/LICENSE-text.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/LICENSE.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/authors.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/index.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/create_all_exercises.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_bisect.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_clean_dir.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_committed_to_main.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_committed_to_wrong.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_conflict.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_latest_message.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_one_small_change.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_rebase_i.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_reset.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_revert_file.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_split_changes.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_time_machine.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/exo_undo_commit.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/index.html</loc></url>
+<url><loc>https://maelle.github.io/saperlipopette/reference/saperlipopette-package.html</loc></url>
 </urlset>
+
