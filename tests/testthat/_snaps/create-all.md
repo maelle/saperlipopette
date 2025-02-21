@@ -35,6 +35,10 @@
       |   +-- R
       |   +-- bla.R
       |   \-- ci.yml
+      +-- reset
+      |   +-- R
+      |   +-- bla.R
+      |   \-- ci.yml
       +-- revert-file
       |   +-- R
       |   +-- bla.txt
